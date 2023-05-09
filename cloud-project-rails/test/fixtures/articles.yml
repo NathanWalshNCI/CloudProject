@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Article_1:
+  title: This is the title for Article_1
+  body: This is the body for Title 1. This is the body for Title 1. This is the body for Title 1. This is the body for Title 1. This is the body for Title 1. This is the body for Title 1. This is the body for Title 1. This is the body for Title 1.
+  published: false
+
+Article_2:
+  title: This is the title for Article_2
+  body: This is the body for Title 2. This is the body for Title 2. This is the body for Title 2. This is the body for Title 2. This is the body for Title 2. This is the body for Title 2. This is the body for Title 2. This is the body for Title 2.
+  published: false

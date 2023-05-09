@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Article Client</title>
+</head>
+<body onload="loadData()">
+	<h2>HTML Article Client</h2>
+	<div id="articles" />
+
+	<script type="text/javascript">
+		function viewArticle()
+		{
+
+		}
+	</script>
+
+	<script type="text/javascript">
+		async function loadData() {
+			var url = "http://localhost:4000/articles?filter=all";
+			var response = await fetch(url, {headers: {'Accept': 'application/json'}})
+			var articles = await response.json();
+			var div = '';
+
+			for( i = 0; i < articles.length; i++ )
+			{
+				div += "<h2>" + articles[i].title + "</h2></ br>" 
+				div += "<p>" + articles[i].body + "</p></ br>" 
+				div += "<a href='article.html?'>View Article</a></ br></ br>" 
+			}
+
+			div += "<div><a href='' onclick=createArticle(); return false;>Create New Article</a></div>"
+			document.getElementById('articles').innerHTML = div;
+		}
+	</script>
+
+</body>
+</html>
